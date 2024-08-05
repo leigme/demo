@@ -58,21 +58,27 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- <input
-        class="form-control form-control-dark w-100"
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
-      /> -->
-      <!-- <div>
-        架构层级：
-        <button
-          type="button"
-          class="btn btn-sm btn-outline-secondary dropdown-toggle"
+      <div>
+        <label for="title-context">架构层级: </label>
+        <a
+          class="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          id="dropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
-          子系统级
-        </button>
-      </div> -->
+          企业级
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">中心级</a>
+          <a class="dropdown-item" href="#">子系统级</a>
+          <a class="dropdown-item" href="#">应用级</a>
+        </div>
+      </div>
+
       <ul class="navbar-nav bg-dark px-3">
         <li class="nav-item text-nowrap">
           <a class="nav-link" href="#">登出</a>
@@ -95,27 +101,33 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="#">
                   <span data-feather="file"></span>
-                  架构层级管理
+                  架构设计管理
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link active" href="#">
                   <span data-feather="shopping-cart"></span>
-                  菜单管理
+                  架构设计草稿
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  权限管理
+                  架构师管理
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  日志管理
+                  架构设计配置
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  与我相关
                 </a>
               </li>
             </ul>
@@ -123,95 +135,84 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <h4>架构层级管理</h4>
+          <h4>架构设计草稿</h4>
           <div class="table-responsive">
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-              新增
-            </button>
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>架构层级</th>
-                  <th>父级</th>
-                  <th>创建人</th>
-                  <th>创建时间</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>企业级</td>
-                  <td>-</td>
-                  <td>wangleij52</td>
-                  <td>通过</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-toggle="modal"
-                      data-target="#exampleModal"
-                    >
-                      详情
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>中心级</td>
-                  <td>企业级</td>
-                  <td>wangleij52</td>
-                  <td>通过</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-toggle="modal"
-                      data-target="#exampleModal"
-                    >
-                      详情
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>子系统级</td>
-                  <td>中心级</td>
-                  <td>wangleij52</td>
-                  <td>通过</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-toggle="modal"
-                      data-target="#exampleModal"
-                    >
-                      详情
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>应用级</td>
-                  <td>子系统级</td>
-                  <td>wangleij52</td>
-                  <td>通过</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-toggle="modal"
-                      data-target="#exampleModal"
-                    >
-                      详情
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                  基础信息
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="中心架构师-架构设计草稿-新增-架构设计图.html"
+                    >架构设计图</a
+                  >
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="中心架构师-架构设计草稿-新增-架构设计文档.html"
+                    >架构设计文档</a
+                  >
+                </li>
+              </ol>
+            </nav>
+            <form>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label"
+                  >设计标题:
+                </label>
+                <div class="col-sm-10">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail3"
+                    placeholder="请输入"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label"
+                  >设计版本:
+                </label>
+                <div class="col-sm-10">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail3"
+                    placeholder="version_1.0.3"
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label
+                  for="exampleFormControlTextarea1"
+                  class="col-sm-2 col-form-label"
+                  >设计简介:
+                </label>
+                <div class="col-sm-10">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                  <button type="submit" class="btn btn-secondary">取 消</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-href="中心架构师-架构设计草稿-新增-架构设计图.html"
+                    onclick="window.location.href = this.getAttribute('data-href')"
+                  >
+                    下一步
+                  </button>
+                </div>
+                <div class="col-sm-4"></div>
+              </div>
+            </form>
           </div>
-          <!-- Button trigger modal -->
 
           <!-- Modal -->
           <div
